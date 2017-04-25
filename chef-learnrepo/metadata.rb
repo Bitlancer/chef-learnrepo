@@ -1,0 +1,7 @@
+name 'learnrepo'
+maintainer 'Matt & Ed'
+maintainer_email 'devnull@bitlancer.com'
+license 'all_rights'
+description 'Installs/Configures learnrepo'
+long_description 'Installs/Configures learnrepo'
+version '0.1.0'
