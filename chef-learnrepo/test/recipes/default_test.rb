@@ -23,7 +23,7 @@ describe yum.repo('learnrepo') do
   it { should be_enabled }
 end
 
-%w(httpd redis mariadb-server ruby).each do |pkg|
+%w(httpd redis mariadb-server ruby ruby-devel mariadb-devel libarchive-devel gcc).each do |pkg|
   describe package(pkg) do
     it { should be_installed }
   end

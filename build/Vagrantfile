@@ -69,7 +69,8 @@ Vagrant.configure("2") do |config|
     mkdir /var/tmp/learnrepo-root
     yum -y update
     yum -y install yum-plugin-downloadonly yum-utils createrepo epel-release
-    yum -y install --downloadonly --installroot=/var/tmp/learnrepo-root --releasever=7 --downloaddir=/srv/learnrepo httpd redis ruby mariadb mariadb-server
+    yum -y groupinstall --downloadonly --installroot=/var/tmp/learnrepo-root --releasever=7 --downloaddir=/srv/learnrepo "Development Tools"
+    yum -y install --downloadonly --installroot=/var/tmp/learnrepo-root --releasever=7 --downloaddir=/srv/learnrepo httpd redis ruby ruby-devel mariadb mariadb-server libarchive-devel mariadb-devel
     createrepo --database /srv/learnrepo
     echo '[learnrepo]
 name=CentOS-$releasever - learnrepo
