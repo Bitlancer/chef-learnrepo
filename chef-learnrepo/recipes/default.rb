@@ -26,5 +26,5 @@ end
 'rpm-build',
 'rpm-sign'].each { |pkg| package pkg }
 
-# With networking disabled via .kitchen.yml, can we install packages?
+# With networking disabled via firewall rule, can we install package?
 package [ 'httpd', 'redis', 'ruby', 'ruby-devel', 'mariadb', 'mariadb-server', 'mariadb-devel', 'libarchive-devel' ]
